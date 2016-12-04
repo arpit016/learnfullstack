@@ -10,7 +10,7 @@
         - if user_signed_in?
           %li
             %a.dropdown-button{"data-activates" => "dropdown1", :href => "#!"}
-              = current_user.email
+              = current_user.name
               %i.material-icons.right arrow_drop_down
         - else
           %li
@@ -24,7 +24,7 @@
         - if user_signed_in?
           %li
             %a.dropdown-button{"data-activates" => "dropdown2", :href => "#!"}
-              = current_user.email
+              = current_user.name
               %i.material-icons.right arrow_drop_down
         - else
           %li

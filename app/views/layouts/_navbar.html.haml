@@ -1,0 +1,29 @@
+%nav.teal.lighten-1.z-depth-2
+  .container
+    .nav-wrapper
+      %a.brand-logo{:href => "#!"} LearnFullStack
+      %a.button-collapse{"data-activates" => "mobile-demo", :href => "#"}
+        %i.material-icons menu
+      %ul.right.hide-on-med-and-down
+        %li
+          %a{:href => "#"} Courses
+        %li
+          %a{:href => "#"} Sign Up
+        %li
+          %a{:href => "#"} Login
+        %li
+          %a.dropdown-button{"data-activates" => "dropdown1", :href => "#!"}
+            Arpit Agarwal
+            %i.material-icons.right arrow_drop_down
+      %ul#mobile-demo.side-nav
+        %li
+          %a{:href => "#"} Courses
+        %li
+          %a{:href => "#"} Sign Up
+        %li
+          %a{:href => "#"} Login
+        %li
+          %a.dropdown-button{"data-activates" => "dropdown2", :href => "#!"}
+            Arpit Agarwal
+            %i.material-icons.right arrow_drop_down
+

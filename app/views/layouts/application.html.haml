@@ -1,0 +1,36 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Learnfullstack
+    %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %ul#dropdown1.dropdown-content
+      %li
+        %a{:href => "#!"} My Profile
+      %li
+        %a{:href => "#!"} My Courses
+      %li.divider
+      %li
+        %a{:href => "#!"} Log Out
+    %ul#dropdown2.dropdown-content
+      %li
+        %a{:href => "#!"} My Profile
+      %li
+        %a{:href => "#!"} My Courses
+      %li.divider
+      %li
+        %a{:href => "#!"} Log Out
+
+    %header
+      = render 'layouts/navbar'
+    %main
+      .container
+        = yield
+    = render 'layouts/footer'
+  :javascript
+    $(".button-collapse").sideNav();
+    $(".dropdown-button").dropdown();

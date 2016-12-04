@@ -7,23 +7,28 @@
       %ul.right.hide-on-med-and-down
         %li
           %a{:href => "#"} Courses
-        %li
-          %a{:href => "#"} Sign Up
-        %li
-          %a{:href => "#"} Login
-        %li
-          %a.dropdown-button{"data-activates" => "dropdown1", :href => "#!"}
-            Arpit Agarwal
-            %i.material-icons.right arrow_drop_down
+        - if user_signed_in?
+          %li
+            %a.dropdown-button{"data-activates" => "dropdown1", :href => "#!"}
+              = current_user.email
+              %i.material-icons.right arrow_drop_down
+        - else
+          %li
+            = link_to "Sign Up", new_user_registration_path
+          %li
+            = link_to "Login", new_user_session_path
+          
       %ul#mobile-demo.side-nav
         %li
           %a{:href => "#"} Courses
-        %li
-          %a{:href => "#"} Sign Up
-        %li
-          %a{:href => "#"} Login
-        %li
-          %a.dropdown-button{"data-activates" => "dropdown2", :href => "#!"}
-            Arpit Agarwal
-            %i.material-icons.right arrow_drop_down
+        - if user_signed_in?
+          %li
+            %a.dropdown-button{"data-activates" => "dropdown2", :href => "#!"}
+              = current_user.email
+              %i.material-icons.right arrow_drop_down
+        - else
+          %li
+            = link_to "Sign Up", new_user_registration_path
+          %li
+            = link_to "Login", new_user_session_path
 

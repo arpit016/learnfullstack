@@ -15,7 +15,7 @@
         %a{:href => "#!"} My Courses
       %li.divider
       %li
-        %a{:href => "#!"} Log Out
+        = link_to "Log Out", destroy_user_session_path, method: :delete, confirm: {data: "Are you sure you want to log out?"}
     %ul#dropdown2.dropdown-content
       %li
         %a{:href => "#!"} My Profile
@@ -23,13 +23,20 @@
         %a{:href => "#!"} My Courses
       %li.divider
       %li
-        %a{:href => "#!"} Log Out
+        = link_to "Log Out", destroy_user_session_path, method: :delete, confirm: {data: "Are you sure you want to log out?"}
 
     %header
       = render 'layouts/navbar'
     %main
       .container
         = yield
+    - if flash[:alert]
+      = js add_gritter(flash[:alert], title: "DailySmarty Alert", sticky: false)
+    - elsif flash[:error]
+      = js add_gritter(flash[:error], title: "DailySmarty Error", sticky: false)
+    - else
+      = js add_gritter(flash[:notice], title: "DailySmarty Notification", sticky: false)
+
     = render 'layouts/footer'
   :javascript
     $(".button-collapse").sideNav();

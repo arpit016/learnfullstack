@@ -3,8 +3,10 @@
     <h5>Log in</h5>
     
     <%= link_to "Log In with Google", user_google_oauth2_omniauth_authorize_path, class: "btn red darken-1" %>
-    <br/>
+    <br/><br/>
     <%= link_to "Log in with Facebook", user_facebook_omniauth_authorize_path, class: "btn blue darken-4" %>
+    <br/><br/>
+    <%= link_to "Log in with Github", user_github_omniauth_authorize_path, class: "btn grey darken-2" %>
     
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="input-field">

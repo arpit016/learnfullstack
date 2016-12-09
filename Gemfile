@@ -18,6 +18,7 @@ gem "figaro"
 gem "omniauth"
 gem "omniauth-google-oauth2"
 gem "omniauth-facebook"
+gem "omniauth-github"
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do

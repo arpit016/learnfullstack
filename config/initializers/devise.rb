@@ -273,4 +273,7 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   require 'omniauth-google-oauth2'
   config.omniauth :google_oauth2, ENV["google_client_id"], ENV["google_client_secret"], {access_type: "offline", approval_prompt: ""}
+  
+  require 'omniauth-facebook'
+  config.omniauth :facebook, ENV["facebook_client_id"], ENV["facebook_client_secret"], scope: 'email', info_fields: 'email,name'
 end

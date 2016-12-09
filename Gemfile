@@ -14,6 +14,9 @@ gem 'haml'
 gem 'materialize-sass'
 gem 'devise'
 gem "gritter", "1.2.0"
+gem "figaro"
+gem "omniauth"
+gem "omniauth-google-oauth2"
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do

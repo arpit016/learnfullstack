@@ -24,6 +24,7 @@ gem 'active_skin'
 gem 'paperclip'
 gem 'redcarpet'
 gem 'coderay'
+gem 'friendly_id'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do

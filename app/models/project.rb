@@ -1,4 +1,7 @@
 class Project < ActiveRecord::Base
+    extend FriendlyId
+    friendly_id :name, use: [:slugged, :finders]
+    
     has_many :tasks, dependent: :destroy
     validates :name, :content, presence: true
     validates :price, presence: true, numericality: { only_integer: true }

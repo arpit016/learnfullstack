@@ -3,7 +3,26 @@ ActiveAdmin.register Task do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
- permit_params :title, :note, :video, :header, :tag, :project_id
+  permit_params :title, :note, :video, :header, :tag, :project_id
+  
+  sortable tree: true,
+           sorting_attribute: :tag
+
+  index :as => :sortable do
+    label :title # item content
+        actions
+  end
+  
+  index do
+    selectable_column
+    column :header
+    column :title
+    column :tag
+    column :project
+    
+    actions
+  end
+  
 #
 # or
 #

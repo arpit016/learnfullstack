@@ -1,0 +1,11 @@
+.row
+  %br/
+  - @projects.each do |project|
+    = link_to project do
+      .col.s12.m6.l4
+        .card
+          .card-image.waves-effect.waves-block.waves-light
+            = image_tag project.image(:thumb)
+          .card-content
+            %span.card-title.grey-text.text-darken-4
+              = project.name

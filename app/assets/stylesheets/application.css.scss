@@ -26,7 +26,23 @@ flex: 1 0 auto;
 }
 
 .btn.waves-effect.waves-light{
-    background-color: #26A69A;
+    background-color: #26A69A !important;
 }
 
-      
+.active {
+       background-color: #26A69A !important;
+}
+
+
+.current-task{
+    color: red !important;
+} 
+
+.list-task{
+    color: #26A69A !important;
+} 
+.buttons{
+    .btn{
+        background-color: #26A69A !important;
+    }
+}

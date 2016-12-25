@@ -5,7 +5,7 @@ ActiveAdmin.register Task do
 #
   permit_params :title, :note, :video, :header, :tag, :project_id
   
-  sortable tree: true,
+  sortable tree: false,
            sorting_attribute: :tag
 
   index :as => :sortable do

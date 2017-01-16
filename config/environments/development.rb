@@ -39,7 +39,7 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
   
-  config.web_console.whiny_requests = false
+  #config.web_console.whiny_requests = false
   
   #config.web_console.whitelisted_ips = '116.73.180.22'
 

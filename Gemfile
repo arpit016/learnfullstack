@@ -26,7 +26,6 @@ gem 'redcarpet'
 gem 'coderay'
 gem 'friendly_id'
 gem 'active_admin-sortable_tree', '~> 0.2.1'
-gem 'activerecord-session_store'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do

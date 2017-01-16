@@ -8,7 +8,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
            sign_in_and_redirect @user, :event => :authentication
            set_flash_message(:notice, :success, :kind => "Google")
        else
-           session["devise.google_data"] = request.env["omniauth.auth"]
+           puts "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+           session["devise.google_data"] = request.env["omniauth.auth"].select { |k, v| k == "email" }
            redirect_to new_user_registration_url
        end
     end
